@@ -1,0 +1,26 @@
+숨어있는 숫자의 덧셈 (2)
+
+문자열 my_string이 매개변수로 주어집니다.
+my_string은 소문자, 대문자, 자연수로만 구성되어있습니다. my_string안의 자연수들의 합을
+return하도록 solution 함수를 완성해주세요.
+
+
+1. solution_1
+    1-1. answer, i, j를 int 지역변수 0으로 선언합니다.
+    1-2. while문을 도는데 my_string[i] != '\0'을 조건으로 설정합니다.
+    1-3. while문 내부에 while문을 두고 isdigit를 통해 문자가 숫자 문자인지 확인합니다.
+    1-4. 확인이 되었다면 외부에 arr 배열에 추가하고 i++, j++
+    1-5. j == 0이 아니라면 arr[j] = '\0' 처리를 합니다.
+    1-6. 그리고 atoi를 사용해서 answer에 더하고 j = 0; i++를 통해 초기화 작업을 합니다.
+
+
+2. solution_2
+    2-1. answer, number, i를 지역변수 0으로 선언합니다.
+    2-2. while문을 my_string[i] != '\0'
+    2-3. 만약 문자가 isdigit true라면 number * 10 + my_string[i] - '0'를 통해 지속적으로 계산합니다.
+        => 숫자 법칙
+    2-4. 만약 아니라면 answer += number;를 하고 number를 초기화합니다.
+        => 바로 아닌 경우 -> +0 / 숫자일 경우 if문 수행문 number
+    2-5. ++i
+    2-6. while문을 벗어나서 answer += number; 처리를 한 번 더합니다.
+        => 널문자를 만나서 벗어나서 else문을 수행 못하는 경우를 고려합니다.
