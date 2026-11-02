@@ -1,0 +1,11 @@
+가까운 수
+
+정수 배열 array와 정수 n이 매개변수로 주어질 때,
+array에 들어있는 정수 중 n과 가장 가까운 수를 return 하도록 solution 함수를 완성해주세요.
+
+
+1. 지역변수 result와 diff를 int 자료형을 선언하고 array[0]와 n을 사용해서 정의합니다.
+2. for을 i = 1부터 시작합니다.
+3. for 내부의 지역변수 int a = abs(array[i]-n);를 선언합니다.
+4. diff와 a를 비교합니다. a가 더 작으면 diff = a; result = array[i]
+5. 만약 diff가 같다면 result와 array[i]가 더 작은것을 result에 할당합니다.
