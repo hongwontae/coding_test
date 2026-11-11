@@ -1,3 +1,5 @@
+// 영어가 싫어요
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
